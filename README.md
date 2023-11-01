@@ -16,4 +16,10 @@ It seems that there's something wrong with Chrome; I can't see the results of wh
 
 
 # 1
+### What song or sound did you pick?
+I chose a song played by piano, the tone and melody of the piano music will be clearer and easier to capture.
 
+### How are you visualizing its samples?
+I used vertical rectangles like piano keys to visualize the peak of this song,The color for the lines is obtained from the color picker.
+In the `draw()` function, the amplitude level of the audio is obtained using `amplitude.getLevel()`, and it's mapped to the canvas height to determine the peak value.
+And I use mouseclick to control the music play.

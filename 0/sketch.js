@@ -29,6 +29,7 @@ function draw() {
   let transparentColor = color(0, 0, 0, 0); 
   // let domColor = colorPicker.color();  
   let threshold = 40; 
+  let editColor = colorPicker.color();
 
   for (let i = 0; i < mImg.pixels.length; i += 4) {
     let pixelColor = color(mImg.pixels[i], mImg.pixels[i + 1], mImg.pixels[i + 2]);
@@ -38,7 +39,7 @@ function draw() {
     } else if (isSimilarColor(pixelColor, color(222, 65, 40), threshold)) {
       mImg.set(i / 4 % mImg.width, floor(i / 4 / mImg.width), transparentColor); 
     } else if (isSimilarColor(pixelColor, color(246, 191, 75), threshold)) {
-      mImg.set(i / 4 % mImg.width, floor(i / 4 / mImg.width), (colorPicker.color()));
+      mImg.set(i / 4 % mImg.width, floor(i / 4 / mImg.width), editColor);
     }
   }
 
