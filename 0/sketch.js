@@ -1,3 +1,4 @@
+p5.disableFriendlyErrors = true;
 let mImg;
 let aImg;
 let colorPicker;
@@ -18,6 +19,8 @@ function setup() {
   colorPicker = createColorPicker("#ed225d");
   colorPicker.position(450, 50);
   oriColor = color(246, 191, 75);
+  // colorPicker.input(changeColor);
+  // noLoop();
 }
 
 function draw() {
@@ -51,21 +54,17 @@ function draw() {
       mImg.pixels[i + 0] = red(editColor);
       mImg.pixels[i + 1] = green(editColor);
       mImg.pixels[i + 2] = blue(editColor);
-    } else if (isSimilarColor(pixelColor, oriColor, threshold)) {
-      mImg.pixels[i + 0] = red(editColor).new;
-      mImg.pixels[i + 1] = green(editColor).new;
-      mImg.pixels[i + 2] = blue(editColor).new;
     }
-    // oriColor = colorPicker.color();
   }
 
+  oriColor = colorPicker.color();
   mImg.updatePixels();
 }
 
-function changeColor() {
-  oriColor = colorPicker.color();
-  redraw(); 
-}
+// function changeColor() {
+//   oriColor = colorPicker.color();
+//   redraw();
+// }
 
 function isSimilarColor(colorA, colorB, threshold) {
   let redDiff = abs(red(colorA) - red(colorB));
