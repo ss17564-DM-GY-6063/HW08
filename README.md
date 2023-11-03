@@ -11,7 +11,7 @@ Replacing blue color with green color.
 If the target colors in the new image are similar to the specified threshold, they will be replaced as well. If the target colors are significantly different, they may not be detected and replaced accurately. Adjusting the threshold value can help improve color detection for different images.
 
 ### a bug
-It seems that there's something wrong with Chrome; I can't see the results of what I've done. I can view them using Safari browser.
+It seems that there's something wrong with Chrome; I can't see the results of what I've done. I can view them using Safari browser. It works well right now (without any changes).
 
 
 
